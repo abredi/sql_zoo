@@ -65,7 +65,11 @@ SELECT name, ROUND(population/1000000, 2), ROUND(gdp/1000000000, 2) FROM world W
 
 -- Show the name AND per-capita GDP for those countries with a GDP of at least one trillion (1000000000000; that is 12 zeros). 
 -- Round this value to the nearest 1000.
+<<<<<<< HEAD
 SELECT name, ROUND(gdp/population, -3) FROM world WHERE gdp > 1000000000000;
+=======
+SELECT name, ROUND(gdp/1000000000, -3) FROM world WHERE gdp > 1000000000000;
+>>>>>>> 094df095ffc04259d07d4024723a75de70ae582a
 
 -- Show the name AND capital where the name AND the capital have the same number of characters.
 SELECT name, capital FROM world WHERE LENGTH(name) = LENGTH(capital)
@@ -75,6 +79,10 @@ SELECT name, capital FROM world WHERE LENGTH(name) = LENGTH(capital)
 SELECT name, capital FROM world WHERE LEFT(name,1) = (LEFT(capital,1)) AND (name <> capital);
 
 -- Find the country that has all the vowels AND no spaces in its name.
+<<<<<<< HEAD
 SELECT name FROM world WHERE name LIKE '%a%' AND name LIKE '%e%' AND name LIKE '%i%' AND 
 name LIKE '%o%' AND name LIKE '%u%' AND name NOT LIKE '% %';
 
+=======
+SELECT name FROM world WHERE name LIKE '%a%' AND name LIKE '%e%' AND name LIKE '%i%' AND name LIKE '%o%' AND name LIKE '%u%' AND name NOT LIKE '% %';
+>>>>>>> 094df095ffc04259d07d4024723a75de70ae582a
